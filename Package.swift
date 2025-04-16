@@ -8,9 +8,7 @@ let package = Package(
     platforms: [.macOS(.v13), .iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "DesignKit",
-            targets: ["DesignKit"]),
+        .library(name: "DesignKit", targets: ["DesignKit"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
