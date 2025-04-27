@@ -11,6 +11,7 @@ public struct CapsuleText: View {
     
     @Environment(\.foregroundColor) var foregroundColor
     @Environment(\.backgroundColor) var backgroundColor
+    @Environment(\.backgroundGradient) var backgroundGradient
     public let text: String
     
     public init(_ text: String) {
@@ -22,8 +23,18 @@ public struct CapsuleText: View {
             .font(.footnote)
             .padding(.horizontal, 12)
             .frame(height: 28)
-            .background(backgroundColor ?? Color.n1)
             .foregroundStyle(foregroundColor ?? Color.n9)
+            .background {
+                if let backgroundColor {
+                    backgroundColor
+                } else if let backgroundGradient {
+                    LinearGradient(gradient: .blue6_4,
+                                   startPoint: .leading,
+                                   endPoint: .trailing)
+                } else {
+                    Color.n1
+                }
+            }
             .clipShape(Capsule())
             .contentShape(Rectangle())
     }

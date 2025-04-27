@@ -11,4 +11,5 @@ public extension EnvironmentValues {
     @Entry var dismissAction: (() -> Void)? = nil
     @Entry var foregroundColor: Color? = nil
     @Entry var backgroundColor: Color? = nil
+    @Entry var backgroundGradient: Gradient? = nil
 }

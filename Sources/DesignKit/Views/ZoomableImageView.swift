@@ -94,3 +94,23 @@ struct ZoomableScrollViewIMP<Content: View>: UIViewRepresentable {
         }
     }
 }
+
+// 预览
+struct ZoomableScrollView_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack {
+            Color.gray.ignoresSafeArea()
+            ZoomableScrollView {
+                VStack {
+                    ForEach(0..<5) { index in
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color.blue)
+                            .frame(width: 300, height: 150)
+                            .overlay(Text("区域 \(index + 1)"))
+                    }
+                }
+                .padding()
+            }
+        }.ignoresSafeArea()
+    }
+}

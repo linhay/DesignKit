@@ -134,6 +134,14 @@ extension Color: DColors {
 
 }
 
+public extension Gradient {
+    
+    static var blue6_4: Gradient { .init(colors: .blue6_4) }
+    static var green6_4: Gradient { .init(colors: .green6_4) }
+    static var orange6_4: Gradient { .init(colors: .orange6_4) }
+
+}
+
 public extension [Color] {
     
     static var purple2_1: [Color] { [.purple2, .purple1] }
