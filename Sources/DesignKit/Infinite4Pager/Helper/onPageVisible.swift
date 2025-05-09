@@ -23,7 +23,7 @@ extension View {
     }
 }
 
-struct CurrentPage: Equatable, Sendable {
+public struct CurrentPage: Equatable, Sendable {
     public let horizontal: Int
     public let vertical: Int
     public init(horizontal: Int, vertical: Int) {
@@ -65,8 +65,9 @@ extension EnvironmentValues {
     }
 }
 
-extension EnvironmentValues {
-    var pagerCurrentPage: CurrentPage? {
+public extension EnvironmentValues {
+    
+    var infinite4CurrentPage: CurrentPage? {
         get { self[CurrentPageKey.self] }
         set { self[CurrentPageKey.self] = newValue }
     }
@@ -114,7 +115,7 @@ struct OnPageVisibleModifier: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     /// 当前视图的可见尺寸比例
     /// 视图的尺寸为容器尺寸
     @ViewBuilder

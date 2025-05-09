@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "DesignKit", targets: ["DesignKit"]),
     ],
     dependencies: [
-        .package(url: "git@github.com:Lakr233/ColorfulX.git", from: "5.6.4")
+        .package(url: "git@github.com:Lakr233/ColorfulX.git", from: "5.6.4"),
     ],
     targets: [
         .target(name: "DesignKit", dependencies: [

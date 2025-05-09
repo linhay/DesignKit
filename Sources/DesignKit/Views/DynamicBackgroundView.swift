@@ -10,14 +10,18 @@ import ColorfulX
 
 public struct DynamicBackgroundView: View {
     
-    @State var color: SKColorfulPreset
+    @Binding var color: SKColorfulPreset
     
     public init(_ color: SKColorfulPreset) {
-        self.color = color
+        self._color = .constant(color)
+    }
+    
+    public init(_ color: Binding<SKColorfulPreset>) {
+        self._color = color
     }
     
     public var body: some View {
-        ColorfulView.init(color: color)
+        ColorfulView(color: color)
     }
 }
 

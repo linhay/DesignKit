@@ -84,7 +84,7 @@ struct ZoomableScrollViewIMP<Content: View>: UIViewRepresentable {
             hostingController = UIHostingController(rootView: parent.content)
             self.parent = parent
         }
-
+        
         func viewForZooming(in _: UIScrollView) -> UIView? {
             hostingController.view
         }

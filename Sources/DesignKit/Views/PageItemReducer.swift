@@ -15,8 +15,7 @@ public class PageItemReducer: Reducer, Identifiable {
     public var isPreview: Bool = false
     public var isZoomable = false
     
-    public init() {
-    }
+    public init() {}
     
 }
 
